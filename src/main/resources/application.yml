@@ -1,0 +1,21 @@
+# 设置com.leyou包的日志级别为debug
+logging:
+  level:
+    com.leyou:
+      debug
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 521qq12345
+
+
+mybatis:
+  # mybatis 别名扫描
+  type-aliases-package: com.leyou.pojo
+  # mapper.xml文件位置,如果没有映射文件，请注释掉
+  #mapper-locations: classpath:mappers/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰支持
